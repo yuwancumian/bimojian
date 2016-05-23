@@ -29,6 +29,15 @@ module.exports = {
       test: /\.js$/,
       loaders: ['babel'],
       include: path.join(__dirname, 'src')
+    },{
+      test: /\.json$/,
+      loader: 'json'
+    },{
+      test: /\.css$/,
+      loader: 'style!css'
+    },{
+      test: /\.(png|jpeg)$/,
+      loader: 'url-loader?limit=6000&name=img/[name].[hash].[ext]'
     }]
   }
 };

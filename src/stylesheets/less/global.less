@@ -1,0 +1,36 @@
+html,body,#root{
+	background: #F8F8F8;
+}
+*{
+	box-sizing: border-box;
+}
+a{
+	color: #666 !important;
+}
+a:hover{
+	color: #999 !important;
+}
+.container{
+	display: flex;
+	height: 100%;
+	padding-left: 200px;
+	background: #fff;
+}
+.aside{
+	width: 200px;
+	font-size: 14px;
+	border-right: 1px solid #eeeeee;
+}
+@media (max-width: 620px) {
+	.aside{
+		width: 200px;
+		display: none;
+	}
+	.container {
+		padding-left: 0;
+	}
+}
+.article{
+	flex: 1;
+	min-height: 100vh;
+}

@@ -1,5 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { App } from './App';
+import RenderRoute from './Route';
+import './stylesheets/normalize.css';
+import './stylesheets/site.less';
 
-render(<App />, document.getElementById('root'));
+render(<RenderRoute />, document.getElementById('root'));

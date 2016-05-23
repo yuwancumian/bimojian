@@ -1,0 +1,31 @@
+.case {
+	padding: 60px 40px 30px;
+	width: 100%;
+	.case-list{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.case-item{
+		height: 200px;
+		width: 29%;
+		margin-bottom: 40px;
+		border: 1px solid #eee;
+	}
+	@media (max-width: 920px) {
+		.case-item{
+			width: 46%;
+		}
+	}
+	@media (max-width: 620px) {
+		.case-item{
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 820px) {
+	.case{
+			padding: 60px 30px 40px;
+	}
+}
