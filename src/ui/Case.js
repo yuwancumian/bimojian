@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import portfolio from '../../data/portfolio';
 import CaseItem from './CaseItem';
+import { QueueAnim } from 'antd';
 
 const Case = React.createClass({
     render() {
@@ -18,7 +19,9 @@ const Case = React.createClass({
         return (
             <div className="case">
                 <div className="case-list">
-                    {CaseItems}          
+                     <QueueAnim delay={500} style={{ height: 150 }}>
+                        {CaseItems}     
+                    </QueueAnim>     
                 </div>
             </div>
         )
