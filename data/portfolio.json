@@ -3,7 +3,7 @@
 		"name":"1th item",
 		"description":"lorem ipsome delo ca deso someca totl esos cess lorem ipsome delo ca deso someca totl esos cess, lorem ipsome delo ca deso someca totl esos cess",
 		"url":"item1",
-		"thumbnail":"images/u1.jpg",
+		"thumbnail":"https://i.v2ex.co/veh3n7Sg.jpeg",
 		"cover":"images/u1.jpg",
 		"date":"2015-5-1",
 		"content":"ss"
@@ -95,24 +95,6 @@
 		"url":"item11",
 		"thumbnail":"images/u11.jpg",
 		"cover":"images/u11.jpg",
-		"date":"2015-5-1",
-		"content":"<h1>this is some conent</h1>"
-	},
-	{
-		"name":"12th item",
-		"description":"lorem ipsome delo ca deso someca totl esos cess",
-		"url":"item12",
-		"thumbnail":"images/u12.jpg",
-		"cover":"images/u12.jpg",
-		"date":"2015-5-1",
-		"content":"<h1>this is some conent</h1>"
-	},
-	{
-		"name":"13th item",
-		"description":"lorem ipsome delo ca deso someca totl esos cess",
-		"url":"item13",
-		"thumbnail":"images/u13.jpg",
-		"cover":"images/u13.jpg",
 		"date":"2015-5-1",
 		"content":"<h1>this is some conent</h1>"
 	}

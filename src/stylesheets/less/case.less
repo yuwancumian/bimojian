@@ -1,16 +1,25 @@
 .case {
-	padding: 60px 40px 30px;
+	padding: 60px 40px 30px 60px;
 	width: 100%;
 	.case-list{
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-around;
+
 	}
 	.case-item{
 		height: 200px;
-		width: 29%;
+		width: 30%;
 		margin-bottom: 40px;
+		margin-right: 3%;
 		border: 1px solid #eee;
+		img{
+			width: 100%;
+			max-height: 120px;
+		}
+		p{
+			height: 60px;
+			overflow: hidden;
+		}
 	}
 	@media (max-width: 920px) {
 		.case-item{
@@ -27,5 +36,84 @@
 @media (max-width: 820px) {
 	.case{
 			padding: 60px 30px 40px;
+	}
+}
+.content,.about{
+	display: flex;
+	.info-area{
+		width: 240px;
+		min-height: 100vh;
+		border-right: 1px solid #eee;
+	}
+	.center{
+		flex: 1;
+		height: 900px;
+	}
+	.link-area{
+		width: 240px;
+		border-left: 1px solid #eee;
+	}
+}
+
+.contact-bar{
+	a{
+		width: 33.333%;
+		height: 110px;
+		line-height: 110px;
+		float: left;
+		text-align: center;
+		border-right: 1px solid #eee;
+	}
+	overflow: hidden;
+	border-bottom: 1px solid #eee;
+}
+.info-title{
+	color: #666;
+	border-bottom: 1px solid #eee;
+	h2{
+		margin-top: 80px;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	h3{
+		font-size: 16px;
+		font-weight: normal;
+		text-align: center;
+		margin-bottom: 80px;
+	}
+}
+.info-keyword{
+	font-size: 14px;
+	color: #666;
+	padding-top: 20px;
+	ul{
+		list-style: none;
+		line-height: 26px;
+		padding-left: 20px;
+	}
+	b{
+		display: inline-block;
+		width: 70px;
+	}
+}
+.link-nav{
+	height: 120px;
+	border-bottom: 1px solid #eee;
+	a{
+		width: 50%;
+		text-align: center;
+		display: inline-block;
+		height: 120px;
+		line-height: 100px;
+	}
+	.prev{
+		border-right: 1px solid #eee;
+	}
+}
+.link-article{
+	ul{
+		padding-left: 0;
+		list-style: none;
+		text-align: center;
 	}
 }

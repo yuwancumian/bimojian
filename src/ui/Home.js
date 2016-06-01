@@ -9,7 +9,8 @@ class Home extends Component {
     render() {
     	return (
 	        <div>
-				<ToggleButton label= "工作" toggleText = "work" className = 'btn-toggle'/>
+                <ToggleButton toggleText = "work"  href='work.html' title='你好'> 工 作 </ToggleButton>
+                <ToggleButton toggleText = "work"  href='haha.html'> 哈 哈 </ToggleButton>
 	        </div>
     	)
     }

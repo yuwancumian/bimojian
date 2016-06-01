@@ -1,4 +1,5 @@
 import React ,{ PropTypes } from 'react';
+import classNames from 'classnames';
 
 const istyle = {
 	display: 'none'
@@ -17,23 +18,27 @@ const  ToggleButton= React.createClass({
 	hover(){
 		console.log(this.state);
 		this.setState({
-			toggled: true
+			toggled: true,
+			active: true
 		}) 
 
 	},
 	out(){
 		this.setState({
-			toggled: false
+			toggled: false,
+			active: false
 		}) 
 	},
     render() {
-    	var ToggleText = this.state.toggled ?  <i>{this.props.toggleText}</i> : "";
+    	let ToggleText = this.state.toggled ?  <i>{this.props.toggleText}</i> : "";
+    	let classes = classNames('btn',{'active':this.state.active});
         return (
-			<a onMouseOver = {this.hover} onMouseOut = {this.out} >
-				{this.props.label}
-				{ToggleText }
+        	<div>
+			<a onMouseOver = {this.hover} onMouseOut = {this.out} className = {classes} >
+				{ this.props.children}
+				<i>{ToggleText}</i>
 			</a>
-
+			</div>
         );
     }
 });

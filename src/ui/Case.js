@@ -1,101 +1,29 @@
 import React, { Component } from 'react';
+import portfolio from '../../data/portfolio';
+import CaseItem from './CaseItem';
 
-class Case extends Component {
-    constructor(props) {
-        super(props);
-    }
+const Case = React.createClass({
     render() {
-    	return (
-    		<div className="case">
-				<div className="case-list">
-                    <div className="case-item">
-                        <a href="">
-                            <img src="" alt=""/>
-                        </a>
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                    <div className="case-item">
-                        <a href="">
-                            <img src="" alt=""/>
-                        </a>
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                    <div className="case-item">
-                        <a href="">
-                            <img src="" alt=""/>
-                        </a>
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                    <div className="case-item">
-                        <a href="">
-                            <img src="" alt=""/>
-                        </a>
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                    <div className="case-item">
-                        <a href="">
-                            <img src="" alt=""/>
-                        </a>
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                    <div className="case-item">
-                        <a href="">
-                            <img src="" alt=""/>
-                        </a>
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                    <div className="case-item">
-                        <a href="">
-                            <img src="" alt=""/>
-                        </a>
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                    <div className="case-item">
-                        <a href="">
-                            <img src="" alt=""/>
-                        </a>
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                    <div className="case-item">
-                        <a href="">
-                            <img src="" alt=""/>
-                        </a>
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                    <div className="case-item">
-                        <a href="">
-                            <img src="" alt=""/>
-                        </a>
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                    <div className="case-item">
-                        <a href="">
-                            <img src="" alt=""/>
-                        </a>
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                    <div className="case-item">
-                        <a href="">
-                            <img src="" alt=""/>
-                        </a>
-                        <h3></h3>
-                        <p></p>
-                    </div>
+        const CaseItems = portfolio.map(function(item,index){
+            return (
+                <CaseItem 
+                    key = {index} 
+                    name = {item.name} 
+                    description = {item.description}
+                    thumbnail = {item.thumbnail}
+                    url = {item.url}
+                />
+            ) 
+        });
+        return (
+            <div className="case">
+                <div className="case-list">
+                    {CaseItems}          
                 </div>
-    		</div>
-    	)
+            </div>
+        )
     }
-}
+});
+
 
 export default Case;
