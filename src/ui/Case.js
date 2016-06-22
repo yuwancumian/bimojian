@@ -2,27 +2,39 @@ import React, { Component } from 'react';
 import portfolio from '../../data/portfolio';
 import CaseItem from './CaseItem';
 import { QueueAnim } from 'antd';
+import Http from '../lib/httpService';
 
 const Case = React.createClass({
+    getInitialState() {
+        return {
+            data: []
+        }
+    },
+    componentWillMount() {
+        Http.get('/posts?categories=2')
+        .then(function(data){
+            this.setState({data: data})
+        }.bind(this));
+    },
     render() {
-        const CaseItems = portfolio.map(function(item,index){
+        console.log(this.state.data);
+        const CaseItems = this.state.data.map(function(item,index){
             return (
-                <CaseItem 
-                    key = {index} 
-                    name = {item.name} 
-                    description = {item.description}
-                    thumbnail = {item.thumbnail}
-                    url = {item.url}
+                <CaseItem
+                    key = {index}
+                    name = {item.title.rendered}
+                    id = {item.id}
+                    description = {item.excerpt.rendered}
+                    thumbnail = {item.better_featured_image.source_url}
+                    // url = {item.url}
                 />
-            ) 
+            )
         });
         return (
             <div className="case">
-                <div className="case-list">
-                     <QueueAnim delay={500} style={{ height: 150 }}>
-                        {CaseItems}     
-                    </QueueAnim>     
-                </div>
+                <QueueAnim delay={500} className="case-list">
+                    {CaseItems}
+                </QueueAnim>
             </div>
         )
     }

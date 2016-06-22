@@ -6,12 +6,12 @@ const  CaseItem= React.createClass({
         return (
 			<div className="case-item">
 
-                <Link to={'/case/'+ this.props.url}>
+                <Link to={'/case/'+ this.props.id}>
                     <img src={this.props.thumbnail} alt=""/>
                 </Link>
-                <h3>{this.props.name}</h3>
-                <p style={{fontSize: 16}}>{this.props.description}</p>
-            </div>						
+                <h4>{this.props.name}</h4>
+            </div>
+
         );
     }
 });

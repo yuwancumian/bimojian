@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router';
 import ToggleButton from './components/ToggleButton';
+import CardBox from './components/CardBox';
 
 class Home extends Component {
     constructor(props) {
@@ -8,9 +9,10 @@ class Home extends Component {
     }
     render() {
     	return (
-	        <div>
-                <ToggleButton toggleText = "work"  href='work.html' title='你好'> 工 作 </ToggleButton>
-                <ToggleButton toggleText = "work"  href='haha.html'> 哈 哈 </ToggleButton>
+	        <div className="home">
+                <CardBox title = "nihao ma ">
+                    <img src={require('../images/img322.jpg')} alt="" />
+                </CardBox>
 	        </div>
     	)
     }

@@ -11,10 +11,11 @@ class Navbar extends React.Component {
     render() {
     	return (
     		<ul>
-	          <li><Link label="Home" to="/">主 页</Link></li>
-              <li><Link label="Case" to="/case">作 品</Link></li>
-              <li><Link label="About" to="/about">关 于</Link></li>
-	          <li><Link label="Case" to="/case">留 言</Link></li>
+                <li><Link label="Home" to="/">主 页</Link></li>
+                <li><Link label="Case" to="/blog">博 客</Link></li>
+                <li><Link label="Case" to="/case">设 计</Link></li>
+                <li><Link label="About" to="/about">关 于</Link></li>
+                <li><Link label="Case" to="/message">留 言</Link></li>
 	        </ul>
     	)
     }

@@ -46,6 +46,7 @@
     "eslint-plugin-react": "^3.11.3",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.13.3",
+    "file-loader": "^0.8.5",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "rimraf": "^2.4.3",
@@ -57,6 +58,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.9.1",
+    "base-64": "^0.1.0",
     "classnames": "^2.2.5",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
@@ -64,6 +66,7 @@
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-flexbox-grid": "^0.9.6",
-    "react-router": "^2.4.0"
+    "react-router": "^2.4.0",
+    "whatwg-fetch": "^1.0.0"
   }
 }
