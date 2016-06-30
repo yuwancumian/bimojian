@@ -41,6 +41,9 @@ module.exports = {
     },{
       test: /\.jpg$/,
       loader: 'file'
+    },{
+      test: /\.(ttf|eot|svg|woff(2))$/,
+      loader: 'file'
     }]
   }
 };

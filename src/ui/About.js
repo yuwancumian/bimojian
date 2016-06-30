@@ -1,6 +1,6 @@
 import React from 'react';
 import ContactBar from './components/ContactBar';
-import InfoTitle from './components/InfoTitle';
+import InfoIntro from './components/InfoIntro';
 import InfoKeyword from './components/InfoKeyword';
 
 const  About = React.createClass({
@@ -17,8 +17,8 @@ const  About = React.createClass({
                 </div>
                 <div className="info-area">
                     <ContactBar />
-                    <InfoTitle />
                     <InfoKeyword />
+                    <InfoIntro />
                 </div>
             </div>
         );

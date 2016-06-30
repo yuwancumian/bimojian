@@ -4,13 +4,13 @@
 	.case-list{
 		display: flex;
 		flex-wrap: wrap;
-
 	}
 	.case-item{
 		height: 200px;
 		width: 30%;
 		margin-bottom: 40px;
 		margin-right: 3%;
+		background: #fff;
 		box-shadow: 0px 10px 32px 0px rgba(0, 0, 0, 0.1);
 		img{
 			width: 100%;
@@ -49,12 +49,12 @@
 	.info-area{
 		width: 240px;
 		min-height: 100vh;
-		border-left: 1px solid #eee;
+		border-left: 1px solid #eeeeee;
 	}
 	.center{
 		flex: 1;
 		height: 900px;
-		padding-top: 60px;
+		padding: 50px 30px;
 		p{
 			img{
 				width: auto;
@@ -65,7 +65,18 @@
 	}
 	.link-area{
 		width: 240px;
-		border-left: 1px solid #eee;
+		border-left: 1px solid #eeeeee;
+	}
+	.cont-title{
+		text-align: center;
+		margin: 0 10%;
+		height: 100px;
+		margin-bottom: 50px;
+		padding-top: 30px;
+		font-size: 20px;
+		background: url(../../images/title_c1.png) top left no-repeat,
+					url(../../images/title_c2.png) bottom right no-repeat;
+		background-size: 80px,80px;
 	}
 }
 
@@ -73,36 +84,39 @@
 	a{
 		width: 33.333%;
 		height: 110px;
-		line-height: 110px;
+		padding-top: 40px;
+		line-height: 20px;
 		float: left;
 		text-align: center;
-		border-right: 1px solid #eee;
+		border-right: 1px solid #eeeeee;
+		text-decoration: none;
+		font-size: 12px;
 	}
 	overflow: hidden;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid #eeeeee;
 }
-.info-title{
+.info-intro{
 	color: #666;
-	border-bottom: 1px solid #eee;
-	h2{
-		margin-top: 80px;
-		margin-bottom: 30px;
-		text-align: center;
-	}
+	border-bottom: 1px solid #eeeeee;
+	padding: 20px 0;
 	h3{
 		font-size: 16px;
 		font-weight: normal;
-		text-align: center;
-		margin-bottom: 80px;
+		margin:10px 18px;
 	}
-	h3:hover{
-		transform: translate(20px ,10px);
-	};
+	div{
+		font-size: 12px;
+		line-height: 20px;
+		margin: 18px;
+		text-indent: 2em;
+	}
+
 }
 .info-keyword{
 	font-size: 14px;
 	color: #666;
-	padding-top: 20px;
+	padding: 30px 0;
+	border-bottom: 1px solid #eee;
 	ul{
 		list-style: none;
 		line-height: 26px;
@@ -115,7 +129,7 @@
 }
 .link-nav{
 	height: 120px;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid #eeeeee;
 	a{
 		width: 50%;
 		text-align: center;
@@ -124,7 +138,7 @@
 		line-height: 100px;
 	}
 	.prev{
-		border-right: 1px solid #eee;
+		border-right: 1px solid #eeeeee;
 	}
 }
 .link-article{

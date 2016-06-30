@@ -1,6 +1,10 @@
 html,body,#root{
 	background: #F8F8F8;
+	height: 100%;
 	font-family: "PT Sans","Helvetica Neue","Helvetica","Hiragino Sans GB","STHeitiSC-Light","Microsoft YaHei";
+}
+body{
+	padding: 0;
 }
 *{
 	box-sizing: border-box;
@@ -11,10 +15,22 @@ a{
 a:hover{
 	color: #999 !important;
 }
+
+input{
+	outline: none;
+}
+.loading{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 40vh;
+	margin: auto;
+	width: 100px;
+}
 .container{
 	display: flex;
-	height: 100%;
 	padding-left: 18%;
+	// background: #EFEFE7;
 	background: #fff;
 }
 .aside{
@@ -27,6 +43,7 @@ a:hover{
 	.aside{
 		width: 18%;
 		display: none;
+		font-family: wawati;
 	}
 	.container {
 		padding-left: 0;
@@ -34,5 +51,19 @@ a:hover{
 }
 .article{
 	flex: 1;
+	position: relative;
+	min-width:0;
 	min-height: 100vh;
+}
+@font-face {
+	font-family: kochi;
+	src: url('../font/kochi.ttf');
+}
+@font-face {
+	font-family: lantingsong;
+	src: url('../font/lanting.ttf');
+}
+@font-face {
+	font-family: Anonymice;
+	src: url('../font/Anonymice.ttf');
 }

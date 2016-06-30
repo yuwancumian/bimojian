@@ -2,19 +2,36 @@
     margin: auto;
     height: 100vh;
     overflow: hidden;
-    .card-info{
-        width: 82%;
-        position: absolute;
+    .card-box{
+        height: 100vh;
         display: flex;
         justify-content: center;
+        align-items: center;
+        background: url(../../images/img322.jpg);
+        background-size: cover;
+    }
+    .card-info{
+        position: absolute;
         font-size: 30px;
         h3{
-            text-align: left;
+            width: 100%;
+            text-align: center;
         }
     }
     .card-img{
-        img{
-            max-width: 60%;
+        display: block;
+        width: 100%;
+        >img{
+            max-width: 100%;
+        }
+        .home-list{
+            position: absolute;
+            width: 82%;
+            top: 20%;
+            right:3%;
+            line-height: 45px;
+            text-align: right;
+            list-style: none;
         }
     }
 }

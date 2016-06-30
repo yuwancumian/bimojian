@@ -63,9 +63,11 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "flexboxgrid": "^6.3.0",
+    "rc-queue-anim": "^0.11.11",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-flexbox-grid": "^0.9.6",
+    "react-loading": "0.0.9",
     "react-router": "^2.4.0",
     "whatwg-fetch": "^1.0.0"
   }

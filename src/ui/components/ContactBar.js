@@ -5,9 +5,9 @@ const ContactBar = React.createClass({
     render() {
         return (
 			<div className="contact-bar">
-				<a href=""><Icon type="link" /></a>
-				<a href=""><Icon type="step-backward" /></a>
-				<a href="" style={{borderRight:0}}>site</a>
+				<a href=""><img src={require('../../images/icon-qq.png')} alt="" /><br/>赞</a>
+				<a href=""><img src={require('../../images/icon-qq.png')} alt="" /><br/>下载</a>
+				<a href="" style={{borderRight:0}}><img src={require('../../images/icon-weixin.png')} alt="" /><br/>分享</a>
     		</div>
         );
     }

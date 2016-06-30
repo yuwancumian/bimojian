@@ -12,7 +12,7 @@ class App extends Component {
         <div className="container">
           <div className="aside">
             <div className="logo">
-              <Link  to="/">
+              <Link to="/" title="返回首页">
                 <img src={require('../images/logo.png')} alt=""/>
               </Link>
             </div>
@@ -20,7 +20,7 @@ class App extends Component {
             <Navbar />
             <div className ="slash"></div>
             <div className ="footer">
-                <p>copyright 2014 by trynet .all rights reserved</p>
+                <p>Copyright 2016 by yuwancumian. All rights reserved</p>
             </div>
           </div>
           <div className="article">

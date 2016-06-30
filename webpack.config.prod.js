@@ -35,9 +35,18 @@ module.exports = {
     },{
       test: /\.css$/,
       loader: 'style!css'
+    }    ,{
+      test: /\.less$/,
+      loader: 'style!css!less'
     },{
       test: /\.(png|jpeg)$/,
       loader: 'url-loader?limit=6000&name=img/[name].[hash].[ext]'
+    },{
+      test: /\.jpg$/,
+      loader: 'file'
+    },{
+      test: /\.(ttf|eot|svg|woff(2))$/,
+      loader: 'file'
     }]
   }
 };
