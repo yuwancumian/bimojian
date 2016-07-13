@@ -6,15 +6,15 @@ const InfoKeyword = React.createClass({
 			<div className="info-keyword">
 				<ul>
 					<li>
-						<b>作品名称：</b>
+						<b>作品名稱：</b>
 						<span>{this.props.name}</span>
 					</li>
 					<li>
-						<b>作 者：</b>
+						<b>作    者：</b>
 						<span>{this.props.author}</span>
 					</li>
 					<li>
-						<b>作品规格：</b>
+						<b>作品規格：</b>
 						<span>{this.props.spec}</span>
 					</li>
 					<li>

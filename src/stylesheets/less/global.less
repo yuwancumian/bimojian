@@ -1,7 +1,9 @@
 html,body,#root{
 	background: #F8F8F8;
 	height: 100%;
-	font-family: "PT Sans","Helvetica Neue","Helvetica","Hiragino Sans GB","STHeitiSC-Light","Microsoft YaHei";
+	font-family: "PT Sans","Helvetica Neue","Helvetica","Apple LiSung Light","STSong","SimSun","Hiragino Sans GB","Microsoft YaHei";
+	margin: 0;
+	padding: 0;
 }
 body{
 	padding: 0;
@@ -29,15 +31,23 @@ input{
 }
 .container{
 	display: flex;
-	padding-left: 18%;
+	padding-left: 240px;
 	// background: #EFEFE7;
 	background: #fff;
 }
 .aside{
-	width: 18%;
+	width: 240px;
 	font-size: 14px;
 	border-right: 1px solid #eeeeee;
 	background: rgba(255, 255, 255, 0.9);
+}
+@media (min-width:1600px){
+	.container{
+		padding-left: 290px;
+	}
+	.aside{
+		width: 290px;
+	}
 }
 @media (max-width: 620px) {
 	.aside{
@@ -55,13 +65,10 @@ input{
 	min-width:0;
 	min-height: 100vh;
 }
-@font-face {
-	font-family: kochi;
-	src: url('../font/kochi.ttf');
-}
+
 @font-face {
 	font-family: lantingsong;
-	src: url('../font/lanting.ttf');
+	src: url('../font/kochi.ttf');
 }
 @font-face {
 	font-family: Anonymice;

@@ -1,10 +1,13 @@
 import React from 'react'
+import {Link} from 'react-router'
 
 const ResultItem = (props) => {
     const article = props.article
     return (
         <li>
-            <a href="">{article.title.rendered} <span className="author">作者：{article.acf.author}</span></a>
+            <Link to={'/classic/'+ article.id}>
+                {article.title.rendered} <span className="author">作者：{article.acf.author}</span>
+            </Link>
         </li>
     )
 }

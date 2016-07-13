@@ -8,7 +8,6 @@ import App from './ui/App';
 import Classic from './ui/Classic';
 import CaseCont from './ui/CaseCont';
 import Message from './ui/Message';
-import Blog from './ui/Blog';
 import BlogContent from './ui/BlogContent';
 import Search from './ui/Search';
 
@@ -30,8 +29,6 @@ const  RenderRoute= React.createClass({
                     <Route path ="/about" component = { About } />
                     <Route path ="/classic" component = { Classic } />
                     <Route path = "/classic/:id" component = { CaseCont } />
-                    <Route path ="/blog" component = { Blog } />
-                    <Route path = "/blog/:title" component = { BlogContent } />
                     <Route path ="/search" component = { Search } />
                 </Route>
             </Router>

@@ -6,6 +6,7 @@ import InfoIntro from './components/InfoIntro';
 import InfoKeyword from './components/InfoKeyword';
 import Http from '../lib/httpService';
 import Loading from 'react-loading';
+import className from 'classnames';
 
 const  CaseCont= React.createClass({
     getInitialState() {
@@ -14,8 +15,15 @@ const  CaseCont= React.createClass({
                 content:{
                     rendered: ''
                 }
-            }
+            },
+            display: true
         }
+    },
+    toggleMenu() {
+        this.setState({
+            display: !this.state.display
+        })
+        console.log(this.state.display);
     },
     componentDidMount (){
         var id = this.props.params.id
@@ -34,17 +42,14 @@ const  CaseCont= React.createClass({
                 </div>
             )
         }
+        var infoAreaClass = className({
+            'info-area': true,
+            'disapear': !this.state.display
+        })
         return (
         	<div className="content">
-
-        		<div className="center">
-                    <div className="cont-title">
-                        {this.state.data.title.rendered}
-                    </div>
-                    <div dangerouslySetInnerHTML = {{__html:this.state.data.content.rendered }}  />
-        		</div>
-                <div className="info-area">
-        			<ContactBar />
+                <div className={infoAreaClass}>
+        			<ContactBar download_url = {this.state.data.acf.download_url}/>
         			<InfoKeyword
                         name = {this.state.data.acf.name}
                         author = {this.state.data.acf.author}
@@ -53,6 +58,15 @@ const  CaseCont= React.createClass({
                     />
         			<InfoIntro excerpt = {this.state.data.excerpt.rendered}/>
         		</div>
+        		<div className="center">
+                    {/**<a href="#" className="toggle-btn" onClick={this.toggleMenu} title="切换"> <img src={require('../images/icon-toggle.png')} alt="" /></a>**/}
+                    <div className="cont-title">
+                        {this.state.data.title.rendered}
+                    </div>
+                    <div dangerouslySetInnerHTML = {{__html:this.state.data.content.rendered }}  />
+        		</div>
+
+
 
         	</div>
         )

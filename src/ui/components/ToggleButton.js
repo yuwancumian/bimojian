@@ -6,13 +6,13 @@ const istyle = {
 };
 
 const  ToggleButton= React.createClass({
-	
+
 	propTypes: {
 	    label: PropTypes.string
 	},
 	getInitialState() {
 	    return {
-	        toggled: false  
+	        toggled: false
 	    };
 	},
 	hover(){
@@ -20,14 +20,14 @@ const  ToggleButton= React.createClass({
 		this.setState({
 			toggled: true,
 			active: true
-		}) 
+		})
 
 	},
 	out(){
 		this.setState({
 			toggled: false,
 			active: false
-		}) 
+		})
 	},
     render() {
     	let ToggleText = this.state.toggled ?  <i>{this.props.toggleText}</i> : "";

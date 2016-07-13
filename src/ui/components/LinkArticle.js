@@ -7,13 +7,11 @@ const LinkArticle= React.createClass({
 				<ul>
 					<li>
 						<a href="">
-							<img src={require('../../images/bg-vi.png')} alt=""/>
 							<p>dskadsldl</p>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<img src={require('../../images/bg-ui.png')} alt=""/>
 							<p>年底看的哦</p>
 						</a>
 					</li>
@@ -24,7 +22,7 @@ const LinkArticle= React.createClass({
 						</a>
 					</li>
 				</ul>
-			</div>			
+			</div>
         );
     }
 });

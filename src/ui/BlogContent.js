@@ -1,6 +1,5 @@
 import React from 'react';
 import Http from '../lib/ghHttp';
-import base64 from 'base-64';
 
 const BlogContent = React.createClass({
 	getInitialState() {
@@ -21,7 +20,7 @@ const BlogContent = React.createClass({
 			<div className="blog-content">
 				<h3>{ this.props.params.title }</h3>
 				<div dangerouslySetInnerHTML = {{__html:this.state.data }} />
-			</div>	
+			</div>
 		)
 	}
 });

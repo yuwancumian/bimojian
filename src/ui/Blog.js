@@ -2,7 +2,7 @@ import React from 'react';
 // import data from '../../data/blog';
 import BlogItem from './BlogItem';
 import Http from '../lib/ghHttp';
-import { QueueAnim } from 'antd';
+import { QueueAnim } from 'rc-queue-anim';
 
 const Blog = React.createClass({
 	getInitialState() {

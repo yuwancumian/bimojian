@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {Link} from 'react-router';
-import ToggleButton from './components/ToggleButton';
 import CardBox from './components/CardBox';
 import QueueAnim from 'rc-queue-anim';
 
