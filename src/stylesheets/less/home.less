@@ -1,37 +1,39 @@
 .home{
     margin: auto;
     height: 100vh;
-    overflow: hidden;
-    .card-box{
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .first-box{
+        height:100vh;
         background: url(../../images/img332.jpg) center center;
-        background-size: cover ;
+        background-size: cover;
     }
-    .card-info{
+    .first-list{
         position: absolute;
-        font-size: 30px;
-        h3{
-            width: 100%;
-            text-align: center;
+        width: 82%;
+        top: 3%;
+        right:10%;
+        line-height: 45px;
+        text-align: right;
+        list-style: none;
+        li{
+            float: right;
+        }
+        img{
+            height: 300px;
+            opacity: .9;
         }
     }
-    .card-img{
-        display: block;
-        width: 100%;
-        >img{
-            max-width: 100%;
-        }
-        .home-list{
-            position: absolute;
-            width: 82%;
-            top: 20%;
-            right:3%;
-            line-height: 45px;
-            text-align: right;
-            list-style: none;
+    .second-box{
+        height: 100vh;
+        background: url(../../images/home-b0.jpg)  20% center no-repeat;
+        background-size: 450px;
+        p{
+            float: right;
+            margin-right: 12%;
+            margin-top: 6%;
+            img{
+                height: 366px;
+            }
         }
     }
+
 }

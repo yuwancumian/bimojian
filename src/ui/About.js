@@ -24,8 +24,7 @@ const  About = React.createClass({
                         title="Example Thread"
                         onNewComment={this.handleNewComment}/>
                 </div>
-                <div className="info-area">
-
+                <div className="info-area" style={{borderLeft: '1px solid #eee'}}>
                 </div>
             </div>
         )

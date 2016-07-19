@@ -19,7 +19,7 @@ class App extends Component {
             <Navbar />
             <div className ="slash"></div>
             <div className ="footer">
-                <p>Copyright 2016 by yuwancumian. All rights reserved</p>
+                <p> Copyright @2016 笔墨间 </p>
             </div>
           </div>
           <div className="article">

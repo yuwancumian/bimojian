@@ -42,7 +42,7 @@ class Search extends Component {
             return (
                 <div className="search">
                     <SearchBar onSearchItem = {item => this.handleSearch(item)}/>
-                    <div> 找不到 {this.state.keyword} 的相关结果</div>
+                    <div className="no-result"> 找不到 {this.state.keyword} 的相关结果</div>
                 </div>
             )
         }
