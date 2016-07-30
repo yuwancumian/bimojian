@@ -5,7 +5,7 @@ const InfoIntro = React.createClass({
         return (
 			<div className="info-intro">
 				<h3>作品簡介</h3>
-                <div dangerouslySetInnerHTML = {{__html:this.props.excerpt }}>
+                <div dangerouslySetInnerHTML = {{__html:this.props.excerpt }} className = "intro">
                 </div>
 
 			</div>

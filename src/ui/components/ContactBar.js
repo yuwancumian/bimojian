@@ -7,9 +7,9 @@ const ContactBar = React.createClass({
     render() {
         return (
 			<div className="contact-bar">
-				<a href={this.props.download_url} title="下载" target="_blank"><img src={require('../../images/icon-download.png')} alt="" style={{marginBottom:3}}/></a>
-				<a href="#" title="分享"><img src={require('../../images/icon-share.png')} alt="" /></a>
-				<a href="" title="分享" style={{borderRight: 'none'}} onClick={() => this.history.goBack()}><img src={require('../../images/icon-like.png')} alt="" /></a>
+				<a href="" title="返 回" style={{marginTop:3}} onClick={() => this.history.goBack()}><img src={require('../../images/icon-back.png')} alt="" style={{width: 30}}/></a>
+				<a href="#" title="分 享"><img src={require('../../images/icon-share.png')} alt="" /></a>
+				<a href={this.props.download_url} style={{borderRight: 'none'}} title="下 载" target="_blank"><img src={require('../../images/icon-download.png')} alt="" style={{marginBottom:3}}/></a>
     		</div>
         );
     }

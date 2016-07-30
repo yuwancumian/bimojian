@@ -11,16 +11,7 @@ import Message from './ui/Message';
 import BlogContent from './ui/BlogContent';
 import Search from './ui/Search';
 
-// export const Routes = () => (
-//    	<Router history={browserHistory}>
-// 	    <Route path='/' component={Home} />
-//         <Route path="/about" component={About} />
-//         <Route path="/case" component={Case} />
-//   	</Router>
-// );
-
-
-const  RenderRoute= React.createClass({
+const RenderRoute = React.createClass({
     render() {
         return (
             <Router history={ browserHistory }>
@@ -36,4 +27,4 @@ const  RenderRoute= React.createClass({
     }
 });
 
-module.exports = RenderRoute;
+export default RenderRoute;

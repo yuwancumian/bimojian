@@ -1,49 +1,86 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import {Link} from 'react-router';
+
+import 'rc-scroll-anim/assets/index.css';
 import QueueAnim from 'rc-queue-anim';
-import {SectionsContainer, Section} from 'react-fullpage';
+import ScrollAnim from 'rc-scroll-anim';
+const ScrollOverPack = ScrollAnim.OverPack;
+const Link = ScrollAnim.Link;
+const Element = ScrollAnim.Element;
+const EventListener = ScrollAnim.Event;
+ScrollAnim.scrollScreen.init();
 
 class Home extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super(...arguments);
+        [
+          'barAnimate',
+          'onFocus',
+        ].forEach((method) => this[method] = this[method].bind(this));
     }
+    componentDidMount() {
+    // 添加改变窗口事件,可加setTimeout
+        EventListener.addEventListener('resize.userResize', this.barAnimate.bind(this));
+    }
+    onFocus(e) {
+        this.dom = e.target;
+      }
+
+      barAnimate() {
+        if (!this.dom) {
+          return;
+        }
+     }
     render() {
-        let options = {
-          activeClass:          'active', // the class that is appended to the sections links
-          anchors:              ['first','second'], // the anchors for each sections
-          arrowNavigation:      true,// use arrow keys
-          className:            'SectionContainer', // the class name for the section container
-          delay:                1000, // the scroll animation speed
-          navigation:           true, // use dots navigatio
-          scrollBar:            false, // use the browser default scrollbar
-          sectionClassName:     'Section', // the section class name
-          sectionPaddingTop:    '0', // the section top padding
-          sectionPaddingBottom: '0', // the section bottom padding
-          verticalAlign:        false // align the content of each section vertical
-        };
+
     	return (
 	        <div className="home" >
-                <SectionsContainer {...options}>
-                    <Section>
-                        <div className = "first-box">
-                            <QueueAnim component={'ul'} interval={2000} type={'left'}  duration={[2000,2000]} ease={[0.17, 0.67, 0.83, 0.67]} className="first-list">
-                                <li key="1"><img src={require('../images/home-a1.png')} alt="" /></li>
-                                <li key="2"><img src={require('../images/home-a2.png')} alt="" /></li>
-                                <li key="3"><img src={require('../images/home-a3.png')} alt="" /></li>
-                                <li key="4"><img src={require('../images/home-a4.png')} alt="" /></li>
-                                <li key="5"><img src={require('../images/home-a5.png')} alt="" /></li>
-                            </QueueAnim>
-                        </div>
-                    </Section>
-                    <Section>
-                        <div className="second-box">
-                            <p>
-                                <img src={require('../images/home-b1.jpg')} alt=""/>
-                            </p>
-                        </div>
-                    </Section>
-                </SectionsContainer>
+                <div className="nav">
+                    <Link
+                        className="nav-list"
+                        location="page0"
+                        showHeightActive="300"
+                        ref="page0"
+                        onFocus={this.onFocus}
+                     >
+
+                    </Link>
+                    <Link
+                        className="nav-list"
+                        location="page1"
+                        showHeightActive="300"
+                    >
+
+                  </Link>
+                </div>
+                <ScrollOverPack className="page0" scrollName="page0" playScale={1}
+                always
+                replay
+                hideProps={{ 0: { reverse: false } }}>
+                    <div className = "first-box">
+                        <QueueAnim key="1" component={'ul'} interval={2000} type={'left'}  duration={[2000,2000]} ease={[0.17, 0.67, 0.83, 0.67]} className="first-list">
+                            <li key="1"><img src={require('../images/home-a1.png')} alt="" /></li>
+                            <li key="2"><img src={require('../images/home-a2.png')} alt="" /></li>
+                            <li key="3"><img src={require('../images/home-a3.png')} alt="" /></li>
+                            <li key="4"><img src={require('../images/home-a4.png')} alt="" /></li>
+                            <li key="5"><img src={require('../images/home-a5.png')} alt="" /></li>
+                        </QueueAnim>
+                    </div>
+                </ScrollOverPack>
+                <ScrollOverPack  scrollName="page1"
+                className="page1"
+                playScale={1}
+                 always={false}
+                hideProps={{ 0: { reverse: false } }}>
+                    <div className="second-box">
+                        <QueueAnim  key="2" component={'ul'} interval={2000} type={'left'}  duration={[2000,2000]} ease={[0.17, 0.67, 0.83, 0.67]} className="second-list">
+                            <li key="1"><img src={require('../images/home-b1.jpg')} alt="" /></li>
+                            <li key="2"><img src={require('../images/home-b2.jpg')} alt="" /></li>
+                            <li key="3"><img src={require('../images/home-b3.jpg')} alt="" /></li>
+                            <li key="4"><img src={require('../images/home-b4.jpg')} alt="" /></li>
+                        </QueueAnim>
+                    </div>
+                </ScrollOverPack>
 
 	        </div>
     	)

@@ -12,10 +12,11 @@ const Case = React.createClass({
         }
     },
     componentWillMount() {
-        Http.get('/posts?categories=2')
+        Http.getClassic()
         .then(function(data){
             this.setState({data: data})
-        }.bind(this));
+            sessionStorage.setItem('posts', JSON.stringify(data))
+        }.bind(this))
     },
     render() {
         if(this.state.data.length<1){

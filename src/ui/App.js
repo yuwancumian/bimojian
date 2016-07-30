@@ -10,7 +10,7 @@ class App extends Component {
       return (
         <div className="container">
           <div className="aside">
-            <div className="logo">
+            <div className="logoc">
               <Link to="/" title="返回首页">
                 <img src={require('../images/logo.png')} alt=""/>
               </Link>
@@ -19,7 +19,7 @@ class App extends Component {
             <Navbar />
             <div className ="slash"></div>
             <div className ="footer">
-                <p> Copyright @2016 笔墨间 </p>
+                <p> Copyright @2016 | 笔墨间 </p>
             </div>
           </div>
           <div className="article">

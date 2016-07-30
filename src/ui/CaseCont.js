@@ -29,7 +29,7 @@ const  CaseCont= React.createClass({
         var id = this.props.params.id
         var url = '/posts/'+id
         console.log(url);
-        Http.get(url)
+        Http.getItem(url)
         .then(function(data){
             this.setState({data: data})
         }.bind(this));
@@ -48,6 +48,14 @@ const  CaseCont= React.createClass({
         })
         return (
         	<div className="content">
+
+        		<div className="center">
+                    {/**<a href="#" className="toggle-btn" onClick={this.toggleMenu} title="切换"> <img src={require('../images/icon-toggle.png')} alt="" /></a>**/}
+                    <div className="cont-title">
+                        {this.state.data.title.rendered}
+                    </div>
+                    <div dangerouslySetInnerHTML = {{__html:this.state.data.content.rendered }}  />
+        		</div>
                 <div className={infoAreaClass}>
         			<ContactBar download_url = {this.state.data.acf.download_url}/>
         			<InfoKeyword
@@ -57,13 +65,6 @@ const  CaseCont= React.createClass({
                         period = {this.state.data.acf.period}
                     />
         			<InfoIntro excerpt = {this.state.data.excerpt.rendered}/>
-        		</div>
-        		<div className="center">
-                    {/**<a href="#" className="toggle-btn" onClick={this.toggleMenu} title="切换"> <img src={require('../images/icon-toggle.png')} alt="" /></a>**/}
-                    <div className="cont-title">
-                        {this.state.data.title.rendered}
-                    </div>
-                    <div dangerouslySetInnerHTML = {{__html:this.state.data.content.rendered }}  />
         		</div>
 
 
