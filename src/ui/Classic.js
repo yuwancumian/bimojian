@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import portfolio from '../../data/portfolio';
 import ClassicItem from './ClassicItem';
 import QueueAnim from 'rc-queue-anim';
 import Http from '../lib/httpService';
